@@ -10,7 +10,7 @@ const StockList = () => {
   useEffect(() => {
     const fetchStocks = async () => {
       const response = await getStocks()
-      setStocks(response as Stock[])
+      setStocks(response as unknown as Stock[])
       console.log("stocks", response)
     }
 
